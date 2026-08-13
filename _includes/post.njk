@@ -7,5 +7,12 @@ layout: base.njk
   <p><time datetime="{{ page.date | htmlDateString }}">{{ page.date | htmlDateString }}</time></p>
   {% if cover %}<figure class="cover"><img src="{{ cover }}" alt="{{ title }}"></figure>{% endif %}
   {{ content | safe }}
+  {% if cta and cta.url %}
+  <aside class="cta-block">
+    {% if cta.heading %}<h2>{{ cta.heading }}</h2>{% endif %}
+    {% if cta.text %}<p>{{ cta.text }}</p>{% endif %}
+    <a class="btn-primary" href="{{ cta.url }}">{{ cta.buttonLabel or "Learn more" }}</a>
+  </aside>
+  {% endif %}
 </article>
 <a class="back-link" href="/">&larr; Back home</a>

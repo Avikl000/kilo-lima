@@ -3,6 +3,11 @@ title: Hello World
 date: 2026-08-13
 description: The first post on the Kilo Lima test site.
 cover: /media/cover-hello-world.svg
+cta:
+  heading: Ready to see the journeys?
+  text: The same pipeline that publishes this post powers full travel itineraries with timelines, photos, and pricing.
+  buttonLabel: View The Southern Crossing
+  url: /itineraries/southern-crossing/
 ---
 This is the first post on **Kilo Lima**, a test site wired up with Eleventy, Pages CMS, and Vercel.
 

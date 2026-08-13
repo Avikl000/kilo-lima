@@ -465,6 +465,52 @@ code {
   margin-top: var(--space-1);
 }
 
+/* CTA block — surface card with gradient hairline + gradient pill button */
+.cta-block {
+  position: relative;
+  overflow: hidden;
+  margin-top: var(--space-5);
+  padding: var(--space-4) var(--space-4) var(--space-4);
+  background: var(--kl-surface);
+  border: 1px solid var(--kl-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+
+.cta-block::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--kl-grad);
+}
+
+.cta-block h2 {
+  font-size: var(--text-display-sm, 1.6rem);
+  margin-bottom: var(--space-1);
+}
+
+.cta-block p {
+  color: var(--kl-muted);
+  max-width: 30rem;
+  margin: 0 auto var(--space-3);
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px var(--space-4);
+  border-radius: var(--radius-pill);
+  background: var(--kl-grad);
+  color: var(--kl-white, #fff);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform var(--duration-base) var(--ease-standard);
+}
+
+.btn-primary:hover { transform: translateY(-1px); }
+.btn-primary:active { transform: scale(0.97); }
+
 /* Footer — contained dark bar */
 .site-footer {
   border-top: 1px solid var(--kl-border);

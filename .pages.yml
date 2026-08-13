@@ -29,6 +29,22 @@ content:
       - name: cover
         label: Cover image
         type: image
+      - name: cta
+        label: Call to action
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+          - name: text
+            label: Text
+            type: text
+          - name: buttonLabel
+            label: Button label
+            type: string
+          - name: url
+            label: Button link
+            type: string
       - name: body
         label: Body
         type: rich-text
