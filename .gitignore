@@ -3,3 +3,5 @@ _site/
 .vercel/
 
 .vercel
+
+.claude/settings.local.json
