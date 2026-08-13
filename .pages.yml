@@ -26,6 +26,9 @@ content:
       - name: description
         label: Description
         type: string
+      - name: cover
+        label: Cover image
+        type: image
       - name: body
         label: Body
         type: rich-text

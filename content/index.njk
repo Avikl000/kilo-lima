@@ -13,6 +13,9 @@ title: Home
   {%- for post in collections.posts | reverse %}
   <li class="post-card">
     <a href="{{ post.url }}">
+      {%- if post.data.cover %}
+      <img class="thumb" src="{{ post.data.cover }}" alt="" loading="lazy">
+      {%- endif %}
       <span class="title">{{ post.data.title }}</span>
       <div class="meta"><time datetime="{{ post.date | htmlDateString }}">{{ post.date | htmlDateString }}</time></div>
       {%- if post.data.description %}

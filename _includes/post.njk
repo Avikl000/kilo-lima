@@ -5,6 +5,7 @@ layout: base.njk
   <p class="eyebrow">Post</p>
   <h1>{{ title }}</h1>
   <p><time datetime="{{ page.date | htmlDateString }}">{{ page.date | htmlDateString }}</time></p>
+  {% if cover %}<figure class="cover"><img src="{{ cover }}" alt="{{ title }}"></figure>{% endif %}
   {{ content | safe }}
 </article>
 <a class="back-link" href="/">&larr; Back home</a>

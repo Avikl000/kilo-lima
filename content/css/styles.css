@@ -237,6 +237,57 @@ main a:hover { text-decoration-color: var(--kl-cyan); }
 
 img { max-width: 100%; border-radius: var(--radius-lg); }
 
+/* Images in post bodies — bordered, radiused, on-grid spacing */
+article img {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--kl-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  margin: var(--space-3) 0;
+}
+
+/* Cover image — gradient hairline echo of the card treatment */
+figure.cover {
+  position: relative;
+  overflow: hidden;
+  margin: var(--space-3) 0;
+  border-radius: var(--radius-lg);
+}
+
+figure.cover::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--kl-grad);
+  z-index: 1;
+}
+
+figure.cover img { margin: 0; border-radius: var(--radius-lg); }
+
+figure { margin: var(--space-3) 0; }
+
+figcaption {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-xs);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--kl-muted);
+  margin-top: var(--space-1);
+}
+
+/* Card thumbnails on the homepage list */
+.post-card .thumb {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--kl-border);
+  margin-bottom: var(--space-2);
+  display: block;
+}
+
 code {
   font-family: var(--font-mono);
   font-size: 0.85em;
