@@ -1,0 +1,8 @@
+{#- Shared CTA block. Expects `cta`; `ctaDefaultLabel` optionally overrides the button fallback. -#}
+{% if cta and cta.url %}
+<aside class="cta-block">
+  {% if cta.heading %}<h2>{{ cta.heading }}</h2>{% endif %}
+  {% if cta.text %}<p>{{ cta.text }}</p>{% endif %}
+  <a class="btn-primary" href="{{ cta.url }}">{{ cta.buttonLabel or ctaDefaultLabel or "Learn more" }}</a>
+</aside>
+{% endif %}

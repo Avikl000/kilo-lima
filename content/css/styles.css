@@ -79,12 +79,18 @@ main.flow { width: 100%; }
   border-bottom: 1px solid var(--kl-border);
 }
 
+/* Fixed height so --header-h (used by the sticky section nav) is always true */
 .site-header .wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: var(--space-2);
-  padding-bottom: var(--space-2);
+  height: calc(var(--header-h) - 1px);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@media (max-width: 460px) {
+  .site-header .tagline { display: none; }
 }
 
 .wordmark {

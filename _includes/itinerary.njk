@@ -109,17 +109,12 @@ layout: base.njk
   </section>
   {% endif %}
 
-  {% if cta and cta.url %}
   <div class="wrap-wide">
-    <aside class="cta-block">
-      {% if cta.heading %}<h2>{{ cta.heading }}</h2>{% endif %}
-      {% if cta.text %}<p>{{ cta.text }}</p>{% endif %}
-      <a class="btn-primary" href="{{ cta.url }}">{{ cta.buttonLabel or "Enquire now" }}</a>
-    </aside>
+    {% set ctaDefaultLabel = "Enquire now" %}
+    {% include "cta.njk" %}
   </div>
-  {% endif %}
 
-  {% set related = collections.itineraries | excludeUrl(page.url) | limit(3) %}
+  {% set related = collections.itineraries | sortByStartDate | excludeUrl(page.url) | limit(3) %}
   <section id="keep-exploring" class="itin-section" aria-labelledby="keep-exploring-heading">
     <div class="wrap-wide">
       <h2 id="keep-exploring-heading">Keep exploring</h2>
@@ -161,5 +156,13 @@ layout: base.njk
     }, { rootMargin: '-45% 0px -50% 0px' });
 
     sections.forEach(function (s) { observer.observe(s); });
+
+    /* Short final sections never reach the observer's middle band, so
+       highlight the last link explicitly at the bottom of the page. */
+    window.addEventListener('scroll', function () {
+      if (window.innerHeight + window.scrollY < document.documentElement.scrollHeight - 4) return;
+      links.forEach(function (a) { a.removeAttribute('aria-current'); });
+      links[links.length - 1].setAttribute('aria-current', 'true');
+    }, { passive: true });
   })();
 </script>

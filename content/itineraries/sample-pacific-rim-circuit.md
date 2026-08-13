@@ -20,6 +20,8 @@ highlights:
   - Sample bullet — temple dawn in central Java
   - Sample bullet — two nights on the Inland Sea
 pdfUrl: "#sample-pdf"
+routeMap: /media/route-sample-pacific-rim.svg
+routeMapCredit: SAMPLE — schematic route, not to scale
 experiences:
   - eyebrow: Sample highlight 01
     heading: Fiordland by water

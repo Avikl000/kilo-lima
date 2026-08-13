@@ -11,6 +11,8 @@ price: From $48,500 per person
 maxGuests: 24 guests
 cover: /media/sossusvlei-dune45.jpg
 coverCredit: Dune 45, Sossusvlei — Giles Laurent, CC BY-SA 4.0, via Wikimedia Commons
+routeMap: /media/route-southern-crossing.svg
+routeMapCredit: Schematic route — indicative, not to scale
 highlights:
   - Sunrise balloon flight over the Sossusvlei dunes
   - Two nights on a private Okavango Delta concession

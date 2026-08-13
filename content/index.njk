@@ -11,7 +11,7 @@ title: Home
 {%- if collections.itineraries.length %}
 <h2>Journeys</h2>
 <ul class="post-list">
-  {%- for trip in collections.itineraries | reverse %}
+  {%- for trip in collections.itineraries | sortByStartDate %}
   <li class="post-card">
     <a href="{{ trip.url }}">
       {%- if trip.data.cover %}
