@@ -29,6 +29,9 @@ content:
       - name: cover
         label: Cover image
         type: image
+      - name: body
+        label: Body
+        type: rich-text
       - name: cta
         label: Call to action
         type: object
@@ -45,9 +48,6 @@ content:
           - name: url
             label: Button link
             type: string
-      - name: body
-        label: Body
-        type: rich-text
 
   - name: itineraries
     label: Itineraries
