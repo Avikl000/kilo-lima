@@ -78,6 +78,9 @@ content:
       - name: cover
         label: Hero image
         type: image
+      - name: coverCredit
+        label: Hero image credit
+        type: string
       - name: highlights
         label: Highlights
         type: string
@@ -97,6 +100,12 @@ content:
           - name: description
             label: Description
             type: text
+          - name: image
+            label: Photo
+            type: image
+          - name: credit
+            label: Photo credit
+            type: string
       - name: inclusions
         label: Inclusions
         type: string

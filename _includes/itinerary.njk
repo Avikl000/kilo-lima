@@ -14,7 +14,12 @@ layout: base.njk
     </dl>
   </header>
 
-  {% if cover %}<figure class="cover"><img src="{{ cover }}" alt="{{ title }}"></figure>{% endif %}
+  {% if cover %}
+  <figure class="cover">
+    <img src="{{ cover }}" alt="{{ title }}">
+    {% if coverCredit %}<figcaption>{{ coverCredit }}</figcaption>{% endif %}
+  </figure>
+  {% endif %}
 
   <section class="itin-section">
     <h2>Overview</h2>
@@ -42,6 +47,12 @@ layout: base.njk
         <div class="day-body">
           <h3>{{ d.location }}</h3>
           <p>{{ d.description }}</p>
+          {% if d.image %}
+          <figure class="day-photo">
+            <img src="{{ d.image }}" alt="{{ d.location }}" loading="lazy">
+            {% if d.credit %}<figcaption>{{ d.credit }}</figcaption>{% endif %}
+          </figure>
+          {% endif %}
         </div>
       </li>
       {%- endfor %}

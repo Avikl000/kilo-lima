@@ -419,6 +419,22 @@ code {
 
 .day-body p { margin: 0; color: var(--kl-muted); }
 
+.day-photo {
+  margin: var(--space-2) 0 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.day-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid var(--kl-border);
+  border-radius: var(--radius-lg);
+  margin: 0;
+}
+
 .inclusion-list {
   list-style: none;
   padding: 0;
