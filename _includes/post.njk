@@ -1,0 +1,9 @@
+---
+layout: base.njk
+---
+<article>
+  <h1>{{ title }}</h1>
+  <p><time datetime="{{ page.date | htmlDateString }}">{{ page.date | htmlDateString }}</time></p>
+  {{ content | safe }}
+</article>
+<p><a href="/">&larr; Back home</a></p>

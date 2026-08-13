@@ -1,0 +1,43 @@
+media:
+  input: content/media
+  output: /media
+
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: content/posts
+    filename: "{year}-{month}-{day}-{fields.title}.md"
+    view:
+      fields: [title, date, description]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: description
+        label: Description
+        type: string
+      - name: body
+        label: Body
+        type: rich-text
+
+  - name: homepage
+    label: Homepage
+    type: file
+    path: content/index.njk
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: body
+        label: Body
+        type: code

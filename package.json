@@ -1,0 +1,14 @@
+{
+  "name": "kilo-lima",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Minimal Eleventy site managed with Pages CMS",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
