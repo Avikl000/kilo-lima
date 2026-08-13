@@ -19,6 +19,11 @@ inclusions:
   - Luxury lodge accommodation throughout
   - All meals, wines, and guided excursions
   - Dedicated tour manager and physician
+cta:
+  heading: Secure your place
+  text: The Southern Crossing is limited to 24 guests. Register your interest and our journey team will be in touch within one business day.
+  buttonLabel: Enquire now
+  url: mailto:journeys@kilo-lima.xyz
 days:
   - label: Days 1–3
     location: Sossusvlei, Namibia

@@ -70,5 +70,13 @@ layout: base.njk
     </ul>
   </section>
   {% endif %}
+
+  {% if cta and cta.url %}
+  <aside class="cta-block">
+    {% if cta.heading %}<h2>{{ cta.heading }}</h2>{% endif %}
+    {% if cta.text %}<p>{{ cta.text }}</p>{% endif %}
+    <a class="btn-primary" href="{{ cta.url }}">{{ cta.buttonLabel or "Enquire now" }}</a>
+  </aside>
+  {% endif %}
 </article>
 <a class="back-link" href="/">&larr; Back home</a>
