@@ -1,0 +1,5 @@
+{
+  "layout": "itinerary.njk",
+  "tags": "itineraries",
+  "permalink": "/itineraries/{{ page.fileSlug }}/"
+}

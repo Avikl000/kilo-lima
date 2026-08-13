@@ -1,0 +1,63 @@
+---
+layout: base.njk
+---
+<article class="itinerary">
+  <header class="itin-hero">
+    <p class="eyebrow">{{ route or "Journey" }}</p>
+    <h1><span class="gradient-text">{{ title }}</span></h1>
+    {% if subtitle %}<p class="lede">{{ subtitle }}</p>{% endif %}
+    <dl class="fact-row">
+      {% if dateLabel %}<div><dt>Dates</dt><dd>{{ dateLabel }}</dd></div>{% endif %}
+      {% if duration %}<div><dt>Duration</dt><dd>{{ duration }}</dd></div>{% endif %}
+      {% if maxGuests %}<div><dt>Guests</dt><dd>{{ maxGuests }}</dd></div>{% endif %}
+      {% if price %}<div><dt>Price</dt><dd>{{ price }}</dd></div>{% endif %}
+    </dl>
+  </header>
+
+  {% if cover %}<figure class="cover"><img src="{{ cover }}" alt="{{ title }}"></figure>{% endif %}
+
+  <section class="itin-section">
+    <h2>Overview</h2>
+    {{ content | safe }}
+  </section>
+
+  {% if highlights and highlights.length %}
+  <section class="itin-section">
+    <h2>Highlights</h2>
+    <ul class="highlight-grid">
+      {%- for h in highlights %}
+      <li>{{ h }}</li>
+      {%- endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if days and days.length %}
+  <section class="itin-section">
+    <h2>Itinerary</h2>
+    <ol class="day-list">
+      {%- for d in days %}
+      <li class="day">
+        <div class="day-label">{{ d.label }}</div>
+        <div class="day-body">
+          <h3>{{ d.location }}</h3>
+          <p>{{ d.description }}</p>
+        </div>
+      </li>
+      {%- endfor %}
+    </ol>
+  </section>
+  {% endif %}
+
+  {% if inclusions and inclusions.length %}
+  <section class="itin-section">
+    <h2>Inclusions</h2>
+    <ul class="inclusion-list">
+      {%- for i in inclusions %}
+      <li>{{ i }}</li>
+      {%- endfor %}
+    </ul>
+  </section>
+  {% endif %}
+</article>
+<a class="back-link" href="/">&larr; Back home</a>

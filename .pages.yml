@@ -33,6 +33,78 @@ content:
         label: Body
         type: rich-text
 
+  - name: itineraries
+    label: Itineraries
+    type: collection
+    path: content/itineraries
+    filename: "{fields.title}.md"
+    view:
+      fields: [title, startDate, route, price]
+      sort: [startDate, title]
+      default:
+        sort: startDate
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: subtitle
+        label: Subtitle / tagline
+        type: string
+      - name: startDate
+        label: Start date
+        type: date
+        required: true
+      - name: dateLabel
+        label: Dates (display text)
+        type: string
+        description: "e.g. 24 August – 6 September 2027"
+      - name: duration
+        label: Duration
+        type: string
+        description: "e.g. 14 days"
+      - name: route
+        label: Route
+        type: string
+        description: "e.g. Cairo to Cape Town"
+      - name: price
+        label: Price
+        type: string
+        description: "e.g. From $114,950 per person"
+      - name: maxGuests
+        label: Max guests
+        type: string
+      - name: cover
+        label: Hero image
+        type: image
+      - name: highlights
+        label: Highlights
+        type: string
+        list: true
+      - name: days
+        label: Day-by-day itinerary
+        type: object
+        list: true
+        fields:
+          - name: label
+            label: Days
+            type: string
+            description: "e.g. Days 1–2"
+          - name: location
+            label: Location
+            type: string
+          - name: description
+            label: Description
+            type: text
+      - name: inclusions
+        label: Inclusions
+        type: string
+        list: true
+      - name: body
+        label: Overview
+        type: rich-text
+
   - name: homepage
     label: Homepage
     type: file
