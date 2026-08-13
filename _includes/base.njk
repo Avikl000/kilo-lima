@@ -16,7 +16,7 @@
       <span class="tagline">Built to Operate</span>
     </div>
   </header>
-  <main class="wrap">
+  <main class="{{ mainClass or 'wrap' }}">
     {{ content | safe }}
   </main>
   <footer class="site-footer">

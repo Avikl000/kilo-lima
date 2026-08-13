@@ -1,5 +1,6 @@
 {
   "layout": "itinerary.njk",
   "tags": "itineraries",
-  "permalink": "/itineraries/{{ page.fileSlug }}/"
+  "permalink": "/itineraries/{{ page.fileSlug }}/",
+  "mainClass": "flow"
 }

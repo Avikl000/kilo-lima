@@ -1,0 +1,13 @@
+{#- Full-bleed hero. The image is decorative: the title beside it carries the meaning. -#}
+<header class="hero-full">
+  {% if cover %}<img class="hero-img" src="{{ cover }}" alt="" fetchpriority="high">{% endif %}
+  <div class="hero-scrim"></div>
+  <div class="hero-copy">
+    <div class="wrap-wide">
+      {% if styleTag %}<p class="eyebrow">{{ styleTag }}</p>{% endif %}
+      <h1>{{ title }}</h1>
+      {% if subtitle %}<p class="hero-sub">{{ subtitle }}</p>{% endif %}
+    </div>
+  </div>
+  {% if coverCredit %}<p class="hero-credit">{{ coverCredit }}</p>{% endif %}
+</header>

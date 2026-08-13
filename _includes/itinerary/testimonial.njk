@@ -1,0 +1,9 @@
+{#- Guest quote. Expects `quote` set by the caller. -#}
+<figure class="testimonial">
+  <blockquote>
+    <p>{{ quote.quote }}</p>
+  </blockquote>
+  {% if quote.attribution %}
+  <figcaption>{{ quote.attribution }}{% if quote.journey %} <span>{{ quote.journey }}</span>{% endif %}</figcaption>
+  {% endif %}
+</figure>

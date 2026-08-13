@@ -1,0 +1,27 @@
+{#- Compact key-facts strip: departures, duration + route, style, price, CTA. -#}
+<aside class="key-facts" aria-label="Key facts">
+  <dl>
+    {% if departures and departures.length %}
+    <div>
+      <dt>Departures</dt>
+      <dd>
+        {%- for d in departures %}<span class="departure">{{ d }}</span>{% endfor -%}
+      </dd>
+    </div>
+    {% elif dateLabel %}
+    <div><dt>Dates</dt><dd>{{ dateLabel }}</dd></div>
+    {% endif %}
+    {% if duration or route %}
+    <div>
+      <dt>Duration</dt>
+      <dd>{{ duration }}{% if duration and route %}, {% endif %}{{ route }}</dd>
+    </div>
+    {% endif %}
+    {% if travelStyle %}<div><dt>Travel style</dt><dd>{{ travelStyle }}</dd></div>{% endif %}
+    {% if maxGuests %}<div><dt>Guests</dt><dd>{{ maxGuests }}</dd></div>{% endif %}
+    {% if price %}<div><dt>Price</dt><dd>{{ price }}</dd></div>{% endif %}
+  </dl>
+  {% if cta and cta.url %}
+  <a class="btn-primary" href="{{ cta.url }}">{{ cta.buttonLabel or "Speak to an expert" }}</a>
+  {% endif %}
+</aside>

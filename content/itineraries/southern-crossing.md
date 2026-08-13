@@ -1,10 +1,12 @@
 ---
 title: The Southern Crossing
 subtitle: Twelve days across three countries by private charter, from desert dunes to the Cape.
+styleTag: By Private Charter
 startDate: 2027-05-10
 dateLabel: 10 – 21 May 2027
 duration: 12 days
 route: Windhoek to Cape Town
+travelStyle: Private charter, small group
 price: From $48,500 per person
 maxGuests: 24 guests
 cover: /media/sossusvlei-dune45.jpg

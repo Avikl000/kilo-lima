@@ -1,0 +1,12 @@
+{#- Accommodation card. Expects `res` set by the caller. -#}
+<li class="residence-card">
+  {% if res.image %}
+  <img src="{{ res.image }}" alt="{{ res.imageAlt or res.name }}" loading="lazy">
+  {% endif %}
+  <div class="residence-body">
+    <h3>{{ res.name }}</h3>
+    {% if res.location %}<p class="residence-location">{{ res.location }}</p>{% endif %}
+    {% if res.description %}<p class="residence-desc">{{ res.description }}</p>{% endif %}
+    {% if res.credit %}<p class="residence-credit">{{ res.credit }}</p>{% endif %}
+  </div>
+</li>

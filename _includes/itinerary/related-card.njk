@@ -1,0 +1,16 @@
+{#- "Keep exploring" card. Expects `trip` (an Eleventy collection item) set by the caller. -#}
+<li class="related-card">
+  <a href="{{ trip.url }}">
+    {% if trip.data.cover %}
+    <img src="{{ trip.data.cover }}" alt="" loading="lazy">
+    {% endif %}
+    <div class="related-body">
+      {% if trip.data.styleTag %}<p class="eyebrow">{{ trip.data.styleTag }}</p>{% endif %}
+      <h3>{{ trip.data.title }}</h3>
+      <p class="related-meta">
+        {{ trip.data.duration }}{% if trip.data.duration and trip.data.route %} &middot; {% endif %}{{ trip.data.route }}
+      </p>
+      {% if trip.data.price %}<p class="related-price">{{ trip.data.price }}</p>{% endif %}
+    </div>
+  </a>
+</li>

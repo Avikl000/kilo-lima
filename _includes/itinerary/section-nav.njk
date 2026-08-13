@@ -1,0 +1,14 @@
+{#- Sticky in-page nav. Only lists sections that actually have content. -#}
+<nav class="section-nav" aria-label="Journey sections">
+  <div class="wrap-wide">
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      {% if experiences and experiences.length %}<li><a href="#highlights">Highlights</a></li>{% endif %}
+      {% if residences and residences.length %}<li><a href="#residences">Residences</a></li>{% endif %}
+      {% if days and days.length %}<li><a href="#itinerary">Itinerary</a></li>{% endif %}
+      {% if inclusions and inclusions.length %}<li><a href="#inclusions">Inclusions</a></li>{% endif %}
+      {% if testimonials and testimonials.length %}<li><a href="#reviews">Reviews</a></li>{% endif %}
+      <li><a href="#keep-exploring">Keep exploring</a></li>
+    </ul>
+  </div>
+</nav>

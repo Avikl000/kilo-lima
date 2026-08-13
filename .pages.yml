@@ -68,14 +68,24 @@ content:
       - name: subtitle
         label: Subtitle / tagline
         type: string
+      - name: styleTag
+        label: Style tag
+        type: string
+        description: "Small line above the hero title, e.g. 'By Private Jet'"
       - name: startDate
         label: Start date
         type: date
         required: true
+        description: "Used for sorting only — not shown on the page"
       - name: dateLabel
         label: Dates (display text)
         type: string
         description: "e.g. 24 August – 6 September 2027"
+      - name: departures
+        label: Departures
+        type: string
+        list: true
+        description: "Optional. If set, replaces Dates in the key-facts strip"
       - name: duration
         label: Duration
         type: string
@@ -84,6 +94,10 @@ content:
         label: Route
         type: string
         description: "e.g. Cairo to Cape Town"
+      - name: travelStyle
+        label: Travel style
+        type: string
+        description: "e.g. Private jet, small group"
       - name: price
         label: Price
         type: string
@@ -94,13 +108,73 @@ content:
       - name: cover
         label: Hero image
         type: image
+        description: "Full-bleed hero background"
       - name: coverCredit
         label: Hero image credit
         type: string
       - name: highlights
-        label: Highlights
+        label: At a glance
         type: string
         list: true
+        description: "Short bullets shown under the overview"
+      - name: experiences
+        label: Highlights (image blocks)
+        type: object
+        list: true
+        description: "Alternating image + text blocks"
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+          - name: eyebrow
+            label: Eyebrow
+            type: string
+          - name: description
+            label: Description
+            type: text
+          - name: image
+            label: Image
+            type: image
+          - name: imageAlt
+            label: Image alt text
+            type: string
+            description: "Describes the image for screen readers. Defaults to the heading"
+          - name: credit
+            label: Image credit
+            type: string
+      - name: residences
+        label: Residences
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Name
+            type: string
+          - name: location
+            label: Location
+            type: string
+          - name: description
+            label: Description
+            type: text
+          - name: image
+            label: Image
+            type: image
+          - name: imageAlt
+            label: Image alt text
+            type: string
+          - name: credit
+            label: Image credit
+            type: string
+      - name: routeMap
+        label: Route map
+        type: image
+      - name: routeMapCredit
+        label: Route map credit
+        type: string
+      - name: pdfUrl
+        label: PDF link
+        type: string
+        description: "Shows a 'Save PDF' link beside the Itinerary heading"
       - name: days
         label: Day-by-day itinerary
         type: object
@@ -119,6 +193,9 @@ content:
           - name: image
             label: Photo
             type: image
+          - name: imageAlt
+            label: Photo alt text
+            type: string
           - name: credit
             label: Photo credit
             type: string
@@ -126,6 +203,20 @@ content:
         label: Inclusions
         type: string
         list: true
+      - name: testimonials
+        label: Testimonials
+        type: object
+        list: true
+        fields:
+          - name: quote
+            label: Quote
+            type: text
+          - name: attribution
+            label: Attribution
+            type: string
+          - name: journey
+            label: Journey / year
+            type: string
       - name: body
         label: Overview
         type: rich-text

@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python \"/c/Users/Kimbal/AppData/Local/Temp/claude/C--Users-Kimbal-OneDrive-CLAUDE-WORKING-FOLDER-Kilo-Lima/4db6d7c6-5fcd-4d9b-9435-d6d54e561483/scratchpad/fetch_photos.py\" \"content/media\")"
+    ]
+  }
+}

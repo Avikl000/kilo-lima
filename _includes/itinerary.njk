@@ -2,81 +2,164 @@
 layout: base.njk
 ---
 <article class="itinerary">
-  <header class="itin-hero">
-    <p class="eyebrow">{{ route or "Journey" }}</p>
-    <h1><span class="gradient-text">{{ title }}</span></h1>
-    {% if subtitle %}<p class="lede">{{ subtitle }}</p>{% endif %}
-    <dl class="fact-row">
-      {% if dateLabel %}<div><dt>Dates</dt><dd>{{ dateLabel }}</dd></div>{% endif %}
-      {% if duration %}<div><dt>Duration</dt><dd>{{ duration }}</dd></div>{% endif %}
-      {% if maxGuests %}<div><dt>Guests</dt><dd>{{ maxGuests }}</dd></div>{% endif %}
-      {% if price %}<div><dt>Price</dt><dd>{{ price }}</dd></div>{% endif %}
-    </dl>
-  </header>
 
-  {% if cover %}
-  <figure class="cover">
-    <img src="{{ cover }}" alt="{{ title }}">
-    {% if coverCredit %}<figcaption>{{ coverCredit }}</figcaption>{% endif %}
-  </figure>
-  {% endif %}
+  {% include "itinerary/hero.njk" %}
+  {% include "itinerary/section-nav.njk" %}
 
-  <section class="itin-section">
-    <h2>Overview</h2>
-    {{ content | safe }}
+  <section id="overview" class="itin-section" aria-labelledby="overview-heading">
+    <div class="wrap-wide">
+      <h2 id="overview-heading">Overview</h2>
+      <div class="overview-grid">
+        <div class="overview-copy">
+          {{ content | safe }}
+          {% if highlights and highlights.length %}
+          <ul class="at-a-glance">
+            {%- for h in highlights %}
+            <li>{{ h }}</li>
+            {%- endfor %}
+          </ul>
+          {% endif %}
+        </div>
+        {% include "itinerary/key-facts.njk" %}
+      </div>
+    </div>
   </section>
 
-  {% if highlights and highlights.length %}
-  <section class="itin-section">
-    <h2>Highlights</h2>
-    <ul class="highlight-grid">
-      {%- for h in highlights %}
-      <li>{{ h }}</li>
-      {%- endfor %}
-    </ul>
+  {% if experiences and experiences.length %}
+  <section id="highlights" class="itin-section" aria-labelledby="highlights-heading">
+    <div class="wrap-wide">
+      <h2 id="highlights-heading">Highlights</h2>
+      <div class="highlight-list">
+        {%- for e in experiences %}
+        {% set exp = e %}
+        {% set expIndex = loop.index %}
+        {% include "itinerary/highlight.njk" %}
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if residences and residences.length %}
+  <section id="residences" class="itin-section" aria-labelledby="residences-heading">
+    <div class="wrap-wide">
+      <h2 id="residences-heading">Residences</h2>
+      <ul class="residence-grid">
+        {%- for r in residences %}
+        {% set res = r %}
+        {% include "itinerary/residence-card.njk" %}
+        {%- endfor %}
+      </ul>
+    </div>
   </section>
   {% endif %}
 
   {% if days and days.length %}
-  <section class="itin-section">
-    <h2>Itinerary</h2>
-    <ol class="day-list">
-      {%- for d in days %}
-      <li class="day">
-        <div class="day-label">{{ d.label }}</div>
-        <div class="day-body">
-          <h3>{{ d.location }}</h3>
-          <p>{{ d.description }}</p>
-          {% if d.image %}
-          <figure class="day-photo">
-            <img src="{{ d.image }}" alt="{{ d.location }}" loading="lazy">
-            {% if d.credit %}<figcaption>{{ d.credit }}</figcaption>{% endif %}
-          </figure>
-          {% endif %}
-        </div>
-      </li>
-      {%- endfor %}
-    </ol>
+  <section id="itinerary" class="itin-section" aria-labelledby="itinerary-heading">
+    <div class="wrap-wide">
+      <div class="section-head">
+        <h2 id="itinerary-heading">Itinerary</h2>
+        {% if pdfUrl %}
+        <a class="pdf-link" href="{{ pdfUrl }}">Save PDF</a>
+        {% endif %}
+      </div>
+
+      {% if routeMap %}
+      <figure class="route-map">
+        <img src="{{ routeMap }}" alt="Route map for {{ title }}" loading="lazy">
+        {% if routeMapCredit %}<figcaption>{{ routeMapCredit }}</figcaption>{% endif %}
+      </figure>
+      {% endif %}
+
+      <ol class="day-list">
+        {%- for d in days %}
+        {% set day = d %}
+        {% set dayIndex = loop.index %}
+        {% include "itinerary/day.njk" %}
+        {%- endfor %}
+      </ol>
+    </div>
   </section>
   {% endif %}
 
   {% if inclusions and inclusions.length %}
-  <section class="itin-section">
-    <h2>Inclusions</h2>
-    <ul class="inclusion-list">
-      {%- for i in inclusions %}
-      <li>{{ i }}</li>
-      {%- endfor %}
-    </ul>
+  <section id="inclusions" class="itin-section" aria-labelledby="inclusions-heading">
+    <div class="wrap-wide">
+      <h2 id="inclusions-heading">Inclusions</h2>
+      <ul class="inclusion-list">
+        {%- for i in inclusions %}
+        <li>{{ i }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if testimonials and testimonials.length %}
+  <section id="reviews" class="itin-section" aria-labelledby="reviews-heading">
+    <div class="wrap-wide">
+      <h2 id="reviews-heading">What guests say</h2>
+      <div class="testimonial-grid">
+        {%- for t in testimonials %}
+        {% set quote = t %}
+        {% include "itinerary/testimonial.njk" %}
+        {%- endfor %}
+      </div>
+    </div>
   </section>
   {% endif %}
 
   {% if cta and cta.url %}
-  <aside class="cta-block">
-    {% if cta.heading %}<h2>{{ cta.heading }}</h2>{% endif %}
-    {% if cta.text %}<p>{{ cta.text }}</p>{% endif %}
-    <a class="btn-primary" href="{{ cta.url }}">{{ cta.buttonLabel or "Enquire now" }}</a>
-  </aside>
+  <div class="wrap-wide">
+    <aside class="cta-block">
+      {% if cta.heading %}<h2>{{ cta.heading }}</h2>{% endif %}
+      {% if cta.text %}<p>{{ cta.text }}</p>{% endif %}
+      <a class="btn-primary" href="{{ cta.url }}">{{ cta.buttonLabel or "Enquire now" }}</a>
+    </aside>
+  </div>
   {% endif %}
+
+  {% set related = collections.itineraries | excludeUrl(page.url) | limit(3) %}
+  <section id="keep-exploring" class="itin-section" aria-labelledby="keep-exploring-heading">
+    <div class="wrap-wide">
+      <h2 id="keep-exploring-heading">Keep exploring</h2>
+      {% if related.length %}
+      <ul class="related-grid">
+        {%- for t in related %}
+        {% set trip = t %}
+        {% include "itinerary/related-card.njk" %}
+        {%- endfor %}
+      </ul>
+      {% else %}
+      <p class="muted">More journeys are on the way.</p>
+      {% endif %}
+      <a class="back-link" href="/">&larr; Back home</a>
+    </div>
+  </section>
+
 </article>
-<a class="back-link" href="/">&larr; Back home</a>
+
+<script>
+  /* Progressive enhancement: mark the section the reader is in. */
+  (function () {
+    var nav = document.querySelector('.section-nav');
+    if (!nav || !('IntersectionObserver' in window)) return;
+    var links = Array.prototype.slice.call(nav.querySelectorAll('a'));
+    var byId = {};
+    links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+    var sections = links
+      .map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); })
+      .filter(Boolean);
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        links.forEach(function (a) { a.removeAttribute('aria-current'); });
+        var active = byId[entry.target.id];
+        if (active) active.setAttribute('aria-current', 'true');
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+
+    sections.forEach(function (s) { observer.observe(s); });
+  })();
+</script>

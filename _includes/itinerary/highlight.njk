@@ -1,0 +1,14 @@
+{#- Alternating image/text block. Expects `exp` and `expIndex` set by the caller. -#}
+<div class="highlight-block{% if expIndex % 2 == 0 %} is-reversed{% endif %}">
+  {% if exp.image %}
+  <figure class="highlight-media">
+    <img src="{{ exp.image }}" alt="{{ exp.imageAlt or exp.heading }}" loading="lazy">
+    {% if exp.credit %}<figcaption>{{ exp.credit }}</figcaption>{% endif %}
+  </figure>
+  {% endif %}
+  <div class="highlight-copy">
+    {% if exp.eyebrow %}<p class="eyebrow">{{ exp.eyebrow }}</p>{% endif %}
+    <h3>{{ exp.heading }}</h3>
+    {% if exp.description %}<p>{{ exp.description }}</p>{% endif %}
+  </div>
+</div>

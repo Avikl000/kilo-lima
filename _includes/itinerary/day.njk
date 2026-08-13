@@ -1,0 +1,19 @@
+{#- Collapsible day. Native <details> keeps it keyboard-usable with no JS. -#}
+<li>
+  <details class="day-item"{% if dayIndex == 1 %} open{% endif %}>
+    <summary>
+      <span class="day-label">{{ day.label }}</span>
+      <h3>{{ day.location }}</h3>
+      <span class="day-toggle" aria-hidden="true"></span>
+    </summary>
+    <div class="day-detail">
+      {% if day.description %}<p>{{ day.description }}</p>{% endif %}
+      {% if day.image %}
+      <figure class="day-photo">
+        <img src="{{ day.image }}" alt="{{ day.imageAlt or day.location }}" loading="lazy">
+        {% if day.credit %}<figcaption>{{ day.credit }}</figcaption>{% endif %}
+      </figure>
+      {% endif %}
+    </div>
+  </details>
+</li>
