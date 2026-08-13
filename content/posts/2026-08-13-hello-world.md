@@ -10,3 +10,5 @@ Edit this post in [Pages CMS](https://app.pagescms.org) and watch it redeploy au
 
 
 This is a test
+
+Edit loop verified: this line was added in Pages CMS on 2026-08-13.
