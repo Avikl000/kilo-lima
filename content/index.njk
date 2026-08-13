@@ -2,15 +2,23 @@
 layout: base.njk
 title: Home
 ---
-<h1>Kilo Lima</h1>
-<p>A minimal Eleventy site managed with <a href="https://pagescms.org">Pages CMS</a>.</p>
+<section class="hero">
+  <p class="eyebrow">The versatile operator</p>
+  <h1><span class="gradient-text">Kilo-Lima</span></h1>
+  <p class="lede">We don't just advise &mdash; we build. And we build things that last. This test site is managed with <a href="https://pagescms.org">Pages CMS</a>.</p>
+</section>
 
 <h2>Posts</h2>
 <ul class="post-list">
   {%- for post in collections.posts | reverse %}
-  <li>
-    <a href="{{ post.url }}">{{ post.data.title }}</a>
-    &mdash; <time datetime="{{ post.date | htmlDateString }}">{{ post.date | htmlDateString }}</time>
+  <li class="post-card">
+    <a href="{{ post.url }}">
+      <span class="title">{{ post.data.title }}</span>
+      <div class="meta"><time datetime="{{ post.date | htmlDateString }}">{{ post.date | htmlDateString }}</time></div>
+      {%- if post.data.description %}
+      <div class="desc">{{ post.data.description }}</div>
+      {%- endif %}
+    </a>
   </li>
   {%- endfor %}
 </ul>

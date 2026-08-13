@@ -1,0 +1,268 @@
+/* Kilo-Lima Design System tokens — source: claude.ai/design "Kilo-Lima Design System" */
+:root {
+  --kl-purple: #9B30FF;
+  --kl-cyan: #00D4FF;
+  --kl-magenta: #CC00FF;
+  --kl-mid: #5E6AFF;
+  --kl-dark: #0A0A0F;
+  --kl-surface: #12121A;
+  --kl-surface-2: #1A1A28;
+  --kl-border: rgba(155, 48, 255, 0.25);
+  --kl-border-cyan: rgba(0, 212, 255, 0.25);
+  --kl-text: #F0EEF8;
+  --kl-muted: rgba(240, 238, 248, 0.55);
+  --kl-grad: linear-gradient(135deg, var(--kl-purple) 0%, var(--kl-mid) 50%, var(--kl-cyan) 100%);
+  --kl-grad-text: linear-gradient(90deg, var(--kl-magenta) 0%, var(--kl-purple) 40%, var(--kl-cyan) 100%);
+
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  --text-display-lg: clamp(2.4rem, 5vw, 3.8rem);
+  --text-display-md: 2.5rem;
+  --text-body-lg: 1.15rem;
+  --text-body-sm: 0.9rem;
+  --text-mono-xs: 0.72rem;
+  --tracking-display: 0.05em;
+  --tracking-mono: 0.15em;
+  --tracking-label: 0.2em;
+  --leading-body: 1.7;
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --radius-lg: 12px;
+  --radius-pill: 100px;
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-base: 0.2s;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--kl-dark);
+  color: var(--kl-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: var(--leading-body);
+}
+
+.wrap {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+/* Header — translucent blur nav per system */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(10, 10, 15, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--kl-border);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: var(--tracking-display);
+  text-transform: uppercase;
+  text-decoration: none;
+  background: var(--kl-grad-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.site-header .tagline {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-xs);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--kl-muted);
+}
+
+/* Hero glow — the system's only background imagery */
+.hero {
+  position: relative;
+  padding: var(--space-6) 0 var(--space-5);
+  text-align: left;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -40% -20% auto;
+  height: 180%;
+  background: radial-gradient(ellipse at 50% 20%, rgba(155, 48, 255, 0.18) 0%, rgba(0, 212, 255, 0.07) 45%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero > * { position: relative; }
+
+h1, h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: var(--tracking-display);
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin: 0 0 var(--space-2);
+}
+
+h1 { font-size: var(--text-display-lg); }
+h2 { font-size: var(--text-display-md); }
+
+.gradient-text {
+  background: var(--kl-grad-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-xs);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--kl-cyan);
+  margin: 0 0 var(--space-1);
+}
+
+.lede {
+  font-size: var(--text-body-lg);
+  color: var(--kl-muted);
+  max-width: 34rem;
+  margin: 0;
+}
+
+/* Post list cards — surface fill, purple border, gradient hairline top edge */
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-3) 0 var(--space-6);
+  display: grid;
+  gap: var(--space-2);
+}
+
+.post-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--kl-surface);
+  border: 1px solid var(--kl-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--duration-base) var(--ease-standard);
+}
+
+.post-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--kl-grad);
+}
+
+.post-card:hover { transform: translateY(-1px); }
+
+.post-card a {
+  display: block;
+  padding: var(--space-3);
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-card .title {
+  font-weight: 700;
+  font-size: var(--text-body-lg);
+}
+
+.post-card .meta {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-xs);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--kl-muted);
+  margin-top: var(--space-1);
+}
+
+.post-card .desc {
+  color: var(--kl-muted);
+  font-size: var(--text-body-sm);
+  margin-top: var(--space-1);
+}
+
+/* Article pages */
+article { padding: var(--space-5) 0 0; }
+
+article time {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-xs);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--kl-muted);
+}
+
+article a { color: var(--kl-cyan); }
+main a { color: var(--kl-cyan); text-decoration-color: var(--kl-border-cyan); }
+main a:hover { text-decoration-color: var(--kl-cyan); }
+
+.back-link {
+  display: inline-block;
+  margin: var(--space-4) 0 var(--space-6);
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--kl-border-cyan);
+  border-radius: var(--radius-pill);
+  color: var(--kl-cyan);
+  text-decoration: none;
+  font-size: var(--text-body-sm);
+  transition: transform var(--duration-base) var(--ease-standard);
+}
+
+.back-link:hover { transform: translateY(-1px); }
+.back-link:active { transform: scale(0.97); }
+
+img { max-width: 100%; border-radius: var(--radius-lg); }
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: var(--kl-surface-2);
+  border: 1px solid var(--kl-border);
+  border-radius: 6px;
+  padding: 0.1em 0.4em;
+}
+
+/* Footer — contained dark bar */
+.site-footer {
+  border-top: 1px solid var(--kl-border);
+  background: var(--kl-surface);
+  margin-top: var(--space-6);
+}
+
+.site-footer .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-xs);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--kl-muted);
+}

@@ -2,8 +2,9 @@
 layout: base.njk
 ---
 <article>
+  <p class="eyebrow">Post</p>
   <h1>{{ title }}</h1>
   <p><time datetime="{{ page.date | htmlDateString }}">{{ page.date | htmlDateString }}</time></p>
   {{ content | safe }}
 </article>
-<p><a href="/">&larr; Back home</a></p>
+<a class="back-link" href="/">&larr; Back home</a>

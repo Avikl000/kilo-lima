@@ -3,21 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ title }} · Kilo Lima</title>
-  <style>
-    body { max-width: 42rem; margin: 2rem auto; padding: 0 1rem; font-family: system-ui, sans-serif; line-height: 1.6; color: #1a1a1a; }
-    a { color: #0a5ad4; }
-    header { margin-bottom: 2rem; border-bottom: 1px solid #ddd; padding-bottom: 1rem; }
-    header a { text-decoration: none; color: inherit; font-weight: 700; }
-    .post-list li { margin-bottom: 0.5rem; }
-    time { color: #666; font-size: 0.9em; }
-    img { max-width: 100%; }
-  </style>
+  <title>{{ title }} · Kilo-Lima</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-  <header><a href="/">Kilo Lima</a></header>
-  <main>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="/">Kilo-Lima</a>
+      <span class="tagline">Built to Operate</span>
+    </div>
+  </header>
+  <main class="wrap">
     {{ content | safe }}
   </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>Kilo-Lima</span>
+      <span>Built to Operate</span>
+    </div>
+  </footer>
 </body>
 </html>
