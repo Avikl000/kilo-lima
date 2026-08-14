@@ -13,6 +13,7 @@
   --surface: #FFFFFF;
   --surface-alt-runway: #E8EEF3;
   --surface-alt-sky: #E3F5FC;
+  --deep: #0E1A24;                 /* deep navy — hero base, CTA band, footer */
 
   /* Text on white */
   --fg: #314E67;
@@ -42,7 +43,7 @@
   --w-bold: 700;
   --w-heavy: 900;
 
-  --fs-hero: clamp(30px, 5vw, 44px);
+  --fs-hero: clamp(2.5rem, 7vw, 5rem);   /* dramatic hero scale, matching aergo.com.au */
   --fs-h1: 32px;
   --fs-h2: 28px;
   --fs-h3: 20px;
@@ -336,7 +337,7 @@ code {
   align-items: flex-end;
   min-height: min(82vh, 660px);
   overflow: hidden;
-  background: var(--runway);
+  background: var(--deep);
 }
 
 .hero-full .hero-img {
@@ -870,28 +871,28 @@ code {
   .pdf-link { transition: none; }
 }
 
-/* CTA block — flat Light-Sky panel, no gradient, no shadow */
+/* CTA block — Runway navy band, white heading, Sky button (per aergo.com.au) */
 .cta-block {
   margin-top: var(--space-6);
-  padding: var(--space-6) var(--space-4);
-  background: var(--surface-alt-sky);
-  border: 0.5px solid var(--border-hairline);
+  padding: var(--space-7) var(--space-4);
+  background: var(--runway);
   border-radius: var(--r-md);
   text-align: center;
 }
 
 .cta-block h2 {
   font-size: var(--fs-h2);
+  color: var(--fg-on-dark);
   margin-bottom: var(--space-2);
 }
 
 .cta-block p {
-  color: var(--fg-muted);
+  color: var(--fg-on-dark-muted);
   max-width: 34rem;
   margin: 0 auto var(--space-4);
 }
 
-/* Primary CTA — Runway fill, 4px radius, 44px hit area, no shadow, no transform */
+/* Primary CTA — Sky fill, 4px radius, 44px hit area, no shadow, no transform */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -900,7 +901,7 @@ code {
   min-height: 44px;
   border-radius: var(--r-sm);
   border: 1.5px solid transparent;
-  background: var(--runway);
+  background: var(--sky);
   color: var(--white);
   font-family: var(--font-sans);
   font-size: var(--fs-ui);
@@ -910,12 +911,11 @@ code {
   transition: background-color var(--duration-base) var(--ease-standard);
 }
 
-.btn-primary:hover { background: var(--runway-hover); }
+.btn-primary:hover { background: var(--sky-hover); }
 
-/* Footer — non-sticky Light-Runway band */
+/* Footer — non-sticky deep-navy band with Sky-tinted labels (per aergo.com.au) */
 .site-footer {
-  border-top: 1px solid var(--border-hairline);
-  background: var(--surface-alt-runway);
+  background: var(--deep);
   margin-top: var(--space-7);
 }
 
@@ -928,5 +928,11 @@ code {
   padding-bottom: var(--space-4);
   font-family: var(--font-sans);
   font-size: var(--fs-caption);
-  color: var(--fg-muted);
+  color: var(--fg-on-dark-muted);
+}
+
+.site-footer .wrap > span:first-child {
+  font-weight: var(--w-heavy);
+  font-size: var(--fs-ui);
+  color: var(--fg-on-dark);
 }
