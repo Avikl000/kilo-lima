@@ -9,42 +9,29 @@ title: Home
 </section>
 
 {%- if collections.itineraries.length %}
-<h2>Journeys</h2>
-<ul class="post-list">
-  {%- for trip in collections.itineraries | sortByStartDate %}
-  <li class="post-card">
-    <a href="{{ trip.url }}">
-      {%- if trip.data.cover %}
-      <img class="thumb" src="{{ trip.data.cover }}" alt="" loading="lazy">
-      {%- endif %}
-      <span class="title">{{ trip.data.title }}</span>
-      <div class="meta">{{ trip.data.dateLabel }}{% if trip.data.duration %} · {{ trip.data.duration }}{% endif %}{% if trip.data.route %} · {{ trip.data.route }}{% endif %}</div>
-      {%- if trip.data.subtitle %}
-      <div class="desc">{{ trip.data.subtitle }}</div>
-      {%- endif %}
-      {%- if trip.data.price %}
-      <div class="price">{{ trip.data.price }}</div>
-      {%- endif %}
-    </a>
-  </li>
-  {%- endfor %}
-</ul>
+<section class="home-section">
+  <div class="section-head">
+    <h2>Journeys</h2>
+    <a class="more-link" href="/itineraries/">View all journeys &rarr;</a>
+  </div>
+  <ul class="post-list">
+    {%- for trip in collections.itineraries | sortByStartDate | limit(3) %}
+    {% include "card-journey.njk" %}
+    {%- endfor %}
+  </ul>
+</section>
 {%- endif %}
 
-<h2>Posts</h2>
-<ul class="post-list">
-  {%- for post in collections.posts | reverse %}
-  <li class="post-card">
-    <a href="{{ post.url }}">
-      {%- if post.data.cover %}
-      <img class="thumb" src="{{ post.data.cover }}" alt="" loading="lazy">
-      {%- endif %}
-      <span class="title">{{ post.data.title }}</span>
-      <div class="meta"><time datetime="{{ post.date | htmlDateString }}">{{ post.date | htmlDateString }}</time></div>
-      {%- if post.data.description %}
-      <div class="desc">{{ post.data.description }}</div>
-      {%- endif %}
-    </a>
-  </li>
-  {%- endfor %}
-</ul>
+{%- if collections.posts.length %}
+<section class="home-section">
+  <div class="section-head">
+    <h2>News</h2>
+    <a class="more-link" href="/news/">View all news &rarr;</a>
+  </div>
+  <ul class="post-list">
+    {%- for post in collections.posts | reverse | limit(3) %}
+    {% include "card-post.njk" %}
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}

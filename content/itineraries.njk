@@ -1,0 +1,16 @@
+---
+layout: base.njk
+title: Itineraries
+permalink: /itineraries/
+---
+<header class="page-head">
+  <p class="eyebrow">Journeys</p>
+  <h1>Itineraries</h1>
+  <p class="lede">Private-charter journeys, built around each brief.</p>
+</header>
+
+<ul class="post-list">
+  {%- for trip in collections.itineraries | sortByStartDate %}
+  {% include "card-journey.njk" %}
+  {%- endfor %}
+</ul>

@@ -1,0 +1,16 @@
+{#- Journey (itinerary) list card. Expects `trip` set by the caller. -#}
+<li class="post-card">
+  <a href="{{ trip.url }}">
+    {%- if trip.data.cover %}
+    <img class="thumb" src="{{ trip.data.cover }}" alt="" loading="lazy">
+    {%- endif %}
+    <span class="title">{{ trip.data.title }}</span>
+    <div class="meta">{{ trip.data.dateLabel }}{% if trip.data.duration %} &middot; {{ trip.data.duration }}{% endif %}{% if trip.data.route %} &middot; {{ trip.data.route }}{% endif %}</div>
+    {%- if trip.data.subtitle %}
+    <div class="desc">{{ trip.data.subtitle }}</div>
+    {%- endif %}
+    {%- if trip.data.price %}
+    <div class="price">{{ trip.data.price }}</div>
+    {%- endif %}
+  </a>
+</li>

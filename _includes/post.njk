@@ -2,11 +2,11 @@
 layout: base.njk
 ---
 <article class="post-article">
-  <p class="eyebrow">Post</p>
+  <p class="eyebrow">News</p>
   <h1>{{ title }}</h1>
   <p><time datetime="{{ page.date | htmlDateString }}">{{ page.date | htmlDateString }}</time></p>
   {% if cover %}<figure class="cover"><img src="{{ cover }}" alt="{{ title }}"></figure>{% endif %}
   {{ content | safe }}
   {% include "cta.njk" %}
 </article>
-<a class="back-link" href="/">&larr; Back home</a>
+<a class="back-link" href="/news/">&larr; All news</a>

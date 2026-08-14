@@ -1,0 +1,16 @@
+---
+layout: base.njk
+title: News
+permalink: /news/
+---
+<header class="page-head">
+  <p class="eyebrow">Journal</p>
+  <h1>News</h1>
+  <p class="lede">Updates, notes, and dispatches from Kilo-Lima.</p>
+</header>
+
+<ul class="post-list">
+  {%- for post in collections.posts | reverse %}
+  {% include "card-post.njk" %}
+  {%- endfor %}
+</ul>

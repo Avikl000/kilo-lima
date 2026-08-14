@@ -11,6 +11,8 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter("limit", (items, n) => (items || []).slice(0, n));
 
+  eleventyConfig.addFilter("startsWith", (str, prefix) => (str || "").startsWith(prefix));
+
   // Itineraries carry no `date` front matter, so Eleventy's default collection
   // order falls back to file dates; sort explicitly by startDate instead.
   eleventyConfig.addFilter("sortByStartDate", (items) =>

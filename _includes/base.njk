@@ -11,7 +11,11 @@
   <header class="site-header">
     <div class="wrap">
       <a class="wordmark" href="/">Kilo-Lima</a>
-      <span class="tagline">built to operate</span>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
+        <a href="/news/"{% if page.url | startsWith('/news') %} aria-current="page"{% endif %}>News</a>
+        <a href="/itineraries/"{% if page.url | startsWith('/itineraries') %} aria-current="page"{% endif %}>Itineraries</a>
+      </nav>
     </div>
   </header>
   <main class="{{ mainClass or 'wrap' }}">
