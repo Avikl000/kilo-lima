@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Alice Springs to Uluru schematic route map">
+<rect width="1200" height="675" fill="#FFFFFF"/>
+<g stroke="rgba(49,78,103,0.06)" stroke-width="1">
+<line x1="150" y1="0" x2="150" y2="675"/>
+<line x1="300" y1="0" x2="300" y2="675"/>
+<line x1="450" y1="0" x2="450" y2="675"/>
+<line x1="600" y1="0" x2="600" y2="675"/>
+<line x1="750" y1="0" x2="750" y2="675"/>
+<line x1="900" y1="0" x2="900" y2="675"/>
+<line x1="1050" y1="0" x2="1050" y2="675"/>
+<line x1="0" y1="135" x2="1200" y2="135"/>
+<line x1="0" y1="270" x2="1200" y2="270"/>
+<line x1="0" y1="405" x2="1200" y2="405"/>
+<line x1="0" y1="540" x2="1200" y2="540"/>
+</g>
+<text x="70" y="92" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2.4" fill="rgba(49,78,103,0.65)">ROUTE — RED CENTRE BY AIR</text>
+<text x="70" y="140" font-family="Arial, sans-serif" font-size="44" font-weight="900" letter-spacing="-0.5" fill="#314E67">Alice Springs to Uluru</text>
+<path d="M875.3,268.3 L614.1,253.8 L490.0,370.0 L324.7,559.0 L440.4,566.2" fill="none" stroke="#314E67" stroke-width="2.5" stroke-dasharray="9 7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="875.3" cy="268.3" r="6" fill="#314E67"/>
+<circle cx="614.1" cy="253.8" r="6" fill="#37AEE4"/>
+<circle cx="490.0" cy="370.0" r="6" fill="#37AEE4"/>
+<circle cx="324.7" cy="559.0" r="6" fill="#37AEE4"/>
+<circle cx="440.4" cy="566.2" r="6" fill="#314E67"/>
+<text x="875.3" y="242.3" text-anchor="end" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#314E67">Alice Springs</text>
+<text x="875.3" y="258.3" text-anchor="end" font-family="Arial, sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.4" fill="rgba(49,78,103,0.65)">START · DAYS 1–2</text>
+<text x="614.1" y="279.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#314E67">West MacDonnells</text>
+<text x="614.1" y="297.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.4" fill="rgba(49,78,103,0.65)">DAY 2</text>
+<text x="490.0" y="344.0" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#314E67">Kings Canyon</text>
+<text x="490.0" y="360.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.4" fill="rgba(49,78,103,0.65)">DAY 3</text>
+<text x="324.7" y="533.0" text-anchor="end" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#314E67">Kata Tjuta</text>
+<text x="324.7" y="549.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.4" fill="rgba(49,78,103,0.65)">DAY 4</text>
+<text x="440.4" y="592.2" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#314E67">Uluru</text>
+<text x="440.4" y="610.2" text-anchor="start" font-family="Arial, sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.4" fill="rgba(49,78,103,0.65)">DAYS 5–6 · END</text>
+<text x="1140" y="648" text-anchor="end" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1.6" fill="rgba(49,78,103,0.40)">SCHEMATIC — NOT TO SCALE</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Cairns to Lizard Island schematic route map">
+<rect width="1200" height="675" fill="#FFFFFF"/>
+<g stroke="rgba(49,78,103,0.06)" stroke-width="1">
+<line x1="150" y1="0" x2="150" y2="675"/>
+<line x1="300" y1="0" x2="300" y2="675"/>
+<line x1="450" y1="0" x2="450" y2="675"/>
+<line x1="600" y1="0" x2="600" y2="675"/>
+<line x1="750" y1="0" x2="750" y2="675"/>
+<line x1="900" y1="0" x2="900" y2="675"/>
+<line x1="1050" y1="0" x2="1050" y2="675"/>
+<line x1="0" y1="135" x2="1200" y2="135"/>
+<line x1="0" y1="270" x2="1200" y2="270"/>
+<line x1="0" y1="405" x2="1200" y2="405"/>
+<line x1="0" y1="540" x2="1200" y2="540"/>
+</g>
+<text x="70" y="92" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2.4" fill="rgba(49,78,103,0.65)">ROUTE — REEF &amp; RAINFOREST</text>
+<text x="70" y="140" font-family="Arial, sans-serif" font-size="44" font-weight="900" letter-spacing="-0.5" fill="#314E67">Cairns to Lizard Island</text>
+<path d="M634.7,566.2 L593.3,449.6 L565.3,364.9 L592.0,253.7" fill="none" stroke="#314E67" stroke-width="2.5" stroke-dasharray="9 7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="634.7" cy="566.2" r="6" fill="#314E67"/>
+<circle cx="593.3" cy="449.6" r="6" fill="#37AEE4"/>
+<circle cx="565.3" cy="364.9" r="6" fill="#37AEE4"/>
+<circle cx="592.0" cy="253.7" r="6" fill="#314E67"/>
+<text x="634.7" y="592.2" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#314E67">Cairns</text>
+<text x="634.7" y="610.2" text-anchor="start" font-family="Arial, sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.4" fill="rgba(49,78,103,0.65)">START · DAY 1</text>
+<text x="593.3" y="475.6" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#314E67">Daintree</text>
+<text x="593.3" y="493.6" text-anchor="start" font-family="Arial, sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.4" fill="rgba(49,78,103,0.65)">DAY 2</text>
+<text x="565.3" y="338.9" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#314E67">Cooktown</text>
+<text x="565.3" y="354.9" text-anchor="start" font-family="Arial, sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.4" fill="rgba(49,78,103,0.65)">DAY 3</text>
+<text x="592.0" y="227.7" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#314E67">Lizard Island</text>
+<text x="592.0" y="243.7" text-anchor="start" font-family="Arial, sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.4" fill="rgba(49,78,103,0.65)">DAYS 4–5 · END</text>
+<text x="1140" y="648" text-anchor="end" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1.6" fill="rgba(49,78,103,0.40)">SCHEMATIC — NOT TO SCALE</text>
+</svg>

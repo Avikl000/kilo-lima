@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Hobart to Launceston schematic route map">
+<rect width="1200" height="675" fill="#FFFFFF"/>
+<g stroke="rgba(49,78,103,0.06)" stroke-width="1">
+<line x1="150" y1="0" x2="150" y2="675"/>
+<line x1="300" y1="0" x2="300" y2="675"/>
+<line x1="450" y1="0" x2="450" y2="675"/>
+<line x1="600" y1="0" x2="600" y2="675"/>
+<line x1="750" y1="0" x2="750" y2="675"/>
+<line x1="900" y1="0" x2="900" y2="675"/>
+<line x1="1050" y1="0" x2="1050" y2="675"/>
+<line x1="0" y1="135" x2="1200" y2="135"/>
+<line x1="0" y1="270" x2="1200" y2="270"/>
+<line x1="0" y1="405" x2="1200" y2="405"/>
+<line x1="0" y1="540" x2="1200" y2="540"/>
+</g>
+<text x="70" y="92" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2.4" fill="rgba(49,78,103,0.65)">ROUTE — TASMANIAN ESCAPE</text>
+<text x="70" y="140" font-family="Arial, sans-serif" font-size="44" font-weight="900" letter-spacing="-0.5" fill="#314E67">Hobart to Launceston</text>
+<path d="M682.8,566.3 L838.9,405.7 L436.7,305.8 L361.1,407.8 L652.3,253.7" fill="none" stroke="#314E67" stroke-width="2.5" stroke-dasharray="9 7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="682.8" cy="566.3" r="6" fill="#314E67"/>
+<circle cx="838.9" cy="405.7" r="6" fill="#37AEE4"/>
+<circle cx="436.7" cy="305.8" r="6" fill="#37AEE4"/>
+<circle cx="361.1" cy="407.8" r="6" fill="#37AEE4"/>
+<circle cx="652.3" cy="253.7" r="6" fill="#314E67"/>
+<text x="682.8" y="592.3" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#314E67">Hobart</text>
+<text x="682.8" y="610.3" text-anchor="start" font-family="Arial, sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.4" fill="rgba(49,78,103,0.65)">START · DAY 1</text>
+<text x="838.9" y="379.7" text-anchor="end" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#314E67">Wineglass Bay</text>
+<text x="838.9" y="395.7" text-anchor="end" font-family="Arial, sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.4" fill="rgba(49,78,103,0.65)">DAY 2</text>
+<text x="436.7" y="279.8" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#314E67">Cradle Mountain</text>
+<text x="436.7" y="295.8" text-anchor="start" font-family="Arial, sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.4" fill="rgba(49,78,103,0.65)">DAYS 3–4</text>
+<text x="361.1" y="433.8" text-anchor="start" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#314E67">Strahan</text>
+<text x="361.1" y="451.8" text-anchor="start" font-family="Arial, sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.4" fill="rgba(49,78,103,0.65)">DAY 5</text>
+<text x="652.3" y="227.7" text-anchor="end" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#314E67">Launceston</text>
+<text x="652.3" y="243.7" text-anchor="end" font-family="Arial, sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.4" fill="rgba(49,78,103,0.65)">DAY 6 · END</text>
+<text x="1140" y="648" text-anchor="end" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1.6" fill="rgba(49,78,103,0.40)">SCHEMATIC — NOT TO SCALE</text>
+</svg>
