@@ -2,15 +2,24 @@
 layout: base.njk
 title: News
 permalink: /news/
+mainClass: wrap-wide
 ---
 <header class="page-head">
   <p class="eyebrow">Journal</p>
   <h1>News</h1>
-  <p class="lede">Updates, notes, and dispatches from Kilo-Lima.</p>
+  <p class="lede">Updates, notes and dispatches from the AERgO team.</p>
 </header>
 
-<ul class="post-list">
-  {%- for post in collections.posts | reverse %}
-  {% include "card-post.njk" %}
+{%- set articles = collections.posts | reverse %}
+{%- if articles.length %}
+{%- set lead = articles[0] %}
+{% set post = lead %}{% include "news-lead.njk" %}
+{%- set more = articles | excludeUrl(lead.url) %}
+{%- if more.length %}
+<ul class="news-grid">
+  {%- for post in more %}
+  {% include "news-grid-card.njk" %}
   {%- endfor %}
 </ul>
+{%- endif %}
+{%- endif %}

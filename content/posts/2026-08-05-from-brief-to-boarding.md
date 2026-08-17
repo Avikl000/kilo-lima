@@ -2,6 +2,7 @@
 title: From brief to boarding — how our charter desk works
 date: 2026-08-05
 description: A charter is only as good as the desk behind it. Here is what happens between your first call and your departure.
+category: Charter
 cover: /media/news-charterdesk.jpg
 cta:
   heading: Speak to the desk

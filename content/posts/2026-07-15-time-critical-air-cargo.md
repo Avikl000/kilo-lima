@@ -2,6 +2,7 @@
 title: When freight has to fly — time-critical air cargo
 date: 2026-07-15
 description: Aircraft parts, pathology, perishables and remote resupply — when the freight cannot wait for the next scheduled service.
+category: Sectors
 cover: /media/news-cargo.jpg
 cta:
   heading: Move it now

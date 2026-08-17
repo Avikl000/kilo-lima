@@ -13,6 +13,12 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter("startsWith", (str, prefix) => (str || "").startsWith(prefix));
 
+  const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  eleventyConfig.addFilter("readableDate", (d) => {
+    const dt = new Date(d);
+    return `${String(dt.getUTCDate()).padStart(2, "0")} ${MONTHS[dt.getUTCMonth()]} ${dt.getUTCFullYear()}`;
+  });
+
   // Itineraries carry no `date` front matter, so Eleventy's default collection
   // order falls back to file dates; sort explicitly by startDate instead.
   eleventyConfig.addFilter("sortByStartDate", (items) =>

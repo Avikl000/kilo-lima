@@ -2,6 +2,7 @@
 title: Own the aircraft, not the operation
 date: 2026-06-30
 description: Aircraft ownership without the operational load — maintenance, crewing, compliance and optional charter revenue, managed on your behalf.
+category: Ownership
 cover: /media/news-management.jpg
 cta:
   heading: Talk to us about your aircraft

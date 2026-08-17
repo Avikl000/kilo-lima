@@ -2,6 +2,7 @@
 title: FIFO and remote-site charters for mining and resources
 date: 2026-07-28
 description: Crew rotations to strips that scheduled services do not reach — reliably, safely, and on your roster, not someone else's timetable.
+category: Sectors
 cover: /media/news-mining.jpg
 cta:
   heading: Move your crews with us

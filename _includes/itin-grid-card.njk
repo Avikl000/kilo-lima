@@ -1,0 +1,11 @@
+{#- Itinerary gallery-grid card. Expects `trip`. -#}
+<li class="j-card">
+  <a href="{{ trip.url }}">
+    {% if trip.data.cover %}<img src="{{ trip.data.cover }}" alt="" loading="lazy">{% endif %}
+    <div class="jc-body">
+      <h3 class="jc-title">{{ trip.data.title }}</h3>
+      <p class="jc-meta">{{ trip.data.duration }}{% if trip.data.duration and trip.data.route %} &middot; {% endif %}{{ trip.data.route }}</p>
+      {% if trip.data.price %}<p class="jc-price">{{ trip.data.price }}</p>{% endif %}
+    </div>
+  </a>
+</li>

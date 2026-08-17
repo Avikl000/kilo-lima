@@ -26,6 +26,11 @@ content:
       - name: description
         label: Description
         type: string
+      - name: category
+        label: Category
+        type: select
+        options:
+          values: [Charter, Sectors, Fleet, Ownership, Company]
       - name: cover
         label: Cover image
         type: image

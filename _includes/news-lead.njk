@@ -1,0 +1,12 @@
+{#- Lead news story (index hero). Expects `post`. -#}
+<article class="news-lead">
+  <div class="nl-photo">
+    {% if post.data.cover %}<img src="{{ post.data.cover }}" alt="{{ post.data.title }}" fetchpriority="high">{% endif %}
+  </div>
+  <div class="nl-body">
+    <p class="nl-eyebrow">{% if post.data.category %}<span class="cat-tag">{{ post.data.category }}</span> &middot; {% endif %}{{ post.date | readableDate }}</p>
+    <h2 class="nl-title"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+    {% if post.data.description %}<p class="nl-desc">{{ post.data.description }}</p>{% endif %}
+    <a class="nl-link" href="{{ post.url }}">Read article &rarr;</a>
+  </div>
+</article>

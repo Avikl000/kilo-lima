@@ -2,6 +2,7 @@
 title: Why the King Air is the right aircraft for regional Australia
 date: 2026-08-12
 description: Short-field capable, pressurised and genuinely comfortable — why the King Air earns its place across regional and remote Australia.
+category: Charter
 cover: /media/news-kingair.jpg
 cta:
   heading: Plan a charter

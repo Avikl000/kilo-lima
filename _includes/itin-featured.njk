@@ -1,0 +1,14 @@
+{#- Featured itinerary card (index lead). Expects `trip`. -#}
+<article class="featured-journey">
+  <div class="fj-photo">
+    {% if trip.data.cover %}<img src="{{ trip.data.cover }}" alt="{{ trip.data.title }}" fetchpriority="high">{% endif %}
+  </div>
+  <div class="fj-body">
+    <p class="eyebrow">{{ trip.data.styleTag or "Featured journey" }}</p>
+    <h2 class="fj-title">{{ trip.data.title }}</h2>
+    <p class="fj-meta">{{ trip.data.dateLabel }}{% if trip.data.duration %} &middot; {{ trip.data.duration }}{% endif %}{% if trip.data.route %} &middot; {{ trip.data.route }}{% endif %}</p>
+    {% if trip.data.subtitle %}<p class="fj-desc">{{ trip.data.subtitle }}</p>{% endif %}
+    {% if trip.data.price %}<p class="fj-price">{{ trip.data.price }}</p>{% endif %}
+    <a class="btn-primary" href="{{ trip.url }}">View journey</a>
+  </div>
+</article>
