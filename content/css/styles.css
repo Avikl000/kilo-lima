@@ -2,6 +2,17 @@
    Aviation-grade restraint: white surfaces, two chromatic colours
    (Runway + Sky), flat (no shadows, ever), hairline borders, generous
    whitespace. Single type family (Google Sans Flex, Arial fallback). */
+
+/* Brand face — Google Sans Flex, self-hosted (SIL OFL, see /fonts/OFL.txt).
+   Latin subset of the variable font: full weight axis + optical sizing. */
+@font-face {
+  font-family: 'Google Sans Flex';
+  src: url('/fonts/GoogleSansFlex.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Primary palette — the only chromatic colours */
   --runway: #314E67;
