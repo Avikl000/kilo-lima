@@ -1,0 +1,11 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "title": "Foundations", "x": 0, "y": 0, "w": 920, "h": 1760 },
+    { "file": "Components.dc.html", "title": "Components", "x": 1000, "y": 0, "w": 920, "h": 1520 },
+    { "file": "Patterns.dc.html", "title": "In context", "x": 2000, "y": 0, "w": 920, "h": 1180 }
+  ],
+  "annotations": [
+    { "id": "intro", "x": 0, "y": -168, "w": 620, "text": "AERgO Design System — foundations, components, and the system in context.\nValues lifted straight from the live stylesheet: Runway #314E67 · Sky #37AEE4 · flat, no shadows · 4 / 8 / 12 radii." }
+  ],
+  "launch": { "view": "canvas" }
+}
