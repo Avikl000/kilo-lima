@@ -173,9 +173,11 @@ content:
       - name: routeMap
         label: Route map
         type: image
+        description: "Upload your own route-map image. Shown in its own 'Route' section. Leave empty to hide the section."
       - name: routeMapCredit
         label: Route map credit
         type: string
+        description: "Optional caption shown beneath the map"
       - name: pdfUrl
         label: PDF link
         type: string

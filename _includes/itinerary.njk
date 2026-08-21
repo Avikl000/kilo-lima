@@ -54,6 +54,18 @@ layout: base.njk
   </section>
   {% endif %}
 
+  {% if routeMap %}
+  <section id="route" class="itin-section" aria-labelledby="route-heading">
+    <div class="wrap-wide">
+      <h2 id="route-heading">Route</h2>
+      <figure class="route-map">
+        <img src="{{ routeMap }}" alt="Route map for {{ title }}" loading="lazy">
+        {% if routeMapCredit %}<figcaption>{{ routeMapCredit }}</figcaption>{% endif %}
+      </figure>
+    </div>
+  </section>
+  {% endif %}
+
   {% if days and days.length %}
   <section id="itinerary" class="itin-section" aria-labelledby="itinerary-heading">
     <div class="wrap-wide">
@@ -63,21 +75,6 @@ layout: base.njk
         <a class="pdf-link" href="{{ pdfUrl }}">Save PDF</a>
         {% endif %}
       </div>
-
-      {% if routeMap %}
-      <figure class="route-map">
-        <img src="{{ routeMap }}" alt="Route map for {{ title }}" loading="lazy">
-        {% if routeMapCredit %}<figcaption>{{ routeMapCredit }}</figcaption>{% endif %}
-      </figure>
-      {% else %}
-      {% set routeSvg = route | routeSchematic(days, title) %}
-      {% if routeSvg %}
-      <figure class="route-map route-map--schematic">
-        {{ routeSvg | safe }}
-        <figcaption>Indicative route — not to scale</figcaption>
-      </figure>
-      {% endif %}
-      {% endif %}
 
       <ol class="day-list">
         {%- for d in days %}

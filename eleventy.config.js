@@ -1,12 +1,5 @@
-import { routeSchematic } from "./_11ty/routemap.js";
-
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "content/media": "media", "content/css": "css", "content/fonts": "fonts" });
-
-  // Auto-generate the schematic route map inline from the itinerary's day stops.
-  eleventyConfig.addFilter("routeSchematic", (route, days, title) =>
-    routeSchematic(route, days, title)
-  );
 
   eleventyConfig.addFilter("htmlDateString", (dateObj) =>
     new Date(dateObj).toISOString().slice(0, 10)
