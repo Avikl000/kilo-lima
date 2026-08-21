@@ -14,8 +14,6 @@ price: From A$12,400 per person, twin share
 maxGuests: 8 guests
 cover: /media/qld-cover.jpg
 coverCredit: The Great Barrier Reef from the air — Ank gsx, CC BY-SA 4.0, via Wikimedia Commons
-routeMap: /media/route-reef-rainforest.svg
-routeMapCredit: Indicative route — not to scale
 highlights:
   - Snorkel or dive the outer reef from a private vessel
   - Cape Tribulation, where the Daintree rainforest runs to the sand

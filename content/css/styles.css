@@ -838,9 +838,11 @@ code {
 /* Route map — content image with hairline */
 .route-map { margin: var(--space-4) 0; }
 
-.route-map img {
+.route-map img,
+.route-map svg {
   display: block;
   width: 100%;
+  height: auto;
   border: 0.5px solid var(--border-hairline);
   border-radius: var(--r-md);
   margin: 0;

@@ -14,8 +14,6 @@ price: From A$10,750 per person, twin share
 maxGuests: 8 guests
 cover: /media/sa-cover.jpg
 coverCredit: Wilpena Pound, Flinders Ranges — Cathcartw, CC BY-SA 4.0, via Wikimedia Commons
-routeMap: /media/route-south-australia.svg
-routeMapCredit: Indicative route — not to scale
 highlights:
   - Cellar doors and long lunches in the Barossa Valley
   - Kangaroo Island wildlife and the Remarkable Rocks

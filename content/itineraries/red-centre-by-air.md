@@ -14,8 +14,6 @@ price: From A$11,900 per person, twin share
 maxGuests: 8 guests
 cover: /media/redcentre-cover.jpg
 coverCredit: Uluru, Uluru-Kata Tjuta National Park — Dietmar Rabich, CC BY-SA 4.0, via Wikimedia Commons
-routeMap: /media/route-red-centre.svg
-routeMapCredit: Indicative route — not to scale
 highlights:
   - Walk the base of Uluru at first light with an Anangu guide
   - The Field of Light installation after dark

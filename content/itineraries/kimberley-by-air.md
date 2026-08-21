@@ -14,8 +14,6 @@ price: From A$14,850 per person, twin share
 maxGuests: 8 guests
 cover: /media/kimberley-cover.jpg
 coverCredit: Bungle Bungle Range, Purnululu — Maclearite, CC BY-SA 4.0, via Wikimedia Commons
-routeMap: /media/route-kimberley.svg
-routeMapCredit: Indicative route — not to scale
 highlights:
   - Fly the Bungle Bungle Range at low level, then walk into Cathedral Gorge
   - Stand before Gwion and Wandjina rock art on the Mitchell Plateau

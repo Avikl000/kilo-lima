@@ -69,6 +69,14 @@ layout: base.njk
         <img src="{{ routeMap }}" alt="Route map for {{ title }}" loading="lazy">
         {% if routeMapCredit %}<figcaption>{{ routeMapCredit }}</figcaption>{% endif %}
       </figure>
+      {% else %}
+      {% set routeSvg = route | routeSchematic(days, title) %}
+      {% if routeSvg %}
+      <figure class="route-map route-map--schematic">
+        {{ routeSvg | safe }}
+        <figcaption>Indicative route — not to scale</figcaption>
+      </figure>
+      {% endif %}
       {% endif %}
 
       <ol class="day-list">

@@ -14,8 +14,6 @@ price: From A$9,650 per person, twin share
 maxGuests: 8 guests
 cover: /media/tasmania-cover.jpg
 coverCredit: Cradle Mountain and Dove Lake — Thennicke, CC BY-SA 4.0, via Wikimedia Commons
-routeMap: /media/route-tasmania.svg
-routeMapCredit: Indicative route — not to scale
 highlights:
   - The lookout above Wineglass Bay in Freycinet National Park
   - Cradle Mountain and the walk around Dove Lake
